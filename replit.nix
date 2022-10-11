@@ -1,5 +1,6 @@
 { pkgs }: {
   deps = [
+    pkgs.dit
     pkgs.docker
     pkgs.python38Full
   ];
