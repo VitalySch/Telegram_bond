@@ -1,5 +1,7 @@
 { pkgs }: {
   deps = [
+    pkgs.docker-machine
+    pkgs.sudo
     pkgs.dit
     pkgs.docker
     pkgs.python38Full

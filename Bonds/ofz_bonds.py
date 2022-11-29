@@ -34,8 +34,9 @@ class OFZ_BONDS:
       cupon_in_year = int(float(bonds_OFZ[key][13]))
       date = bonds_OFZ[key][4].split('-')
       closing_date = date[2] + '-' + date[1] + '-' + date[0]
-      profit = round(1000 - cost, 2)
-      profit_2 = round(profit / cost * 100, 2)
+      if cost > 0:
+        profit = round(1000 - cost, 2)
+        profit_2 = round(profit / cost * 100, 2)
       cupon_profit = round(cupon * cupon_in_year / cost * 100, 2)
       cupon_profit_2 = round(cupon * cupon_in_year, 2)  
       if cost <= self.profit and int(date[0]) <=  self.year:
